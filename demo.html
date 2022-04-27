@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~8.3.*/dist/index.js'></script>
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    #deck-map-container {
+      width: 100%;
+      height: 100%;
+      background-color: black;
+    }
+
+    #map {
+      pointer-events: none;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+    }
+
+    #deckgl-overlay {
+      z-index: 2;
+      background: none;
+    }
+
+    #deck-map-wrapper {
+      width: 100%;
+      height: 100%;
+    }
+
+    #deck-container {
+      width: 100vw;
+      height: 100vh;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const jsonInput = {"initialViewState": {"bearing": -27.36, "latitude": 37.587111, "longitude": 126.969069, "maxZoom": 15, "minZoom": 5, "pitch": 40.5, "zoom": 10}, "layers": [{"@@type": "HexagonLayer", "autoHighlight": true, "coverage": 1, "data": [{"floorNm": "1", "hoNm": "101", "lat": 37.587111, "lng": 126.969069, "\uace0\uc720\ubc88\ud638": "1111010100100040007", "\uacf5\ub3d9\uc8fc\ud0dd\uad6c\ubd84\uba85": "\ub2e4\uc138\ub300", "\uacf5\ub3d9\uc8fc\ud0dd\uad6c\ubd84\ucf54\ub4dc": "5", "\uacf5\ub3d9\uc8fc\ud0dd\uba85": "\uc2e0\uad6c\ud30c\uc778\ud790", "\uacf5\ub3d9\uc8fc\ud0dd\ucf54\ub4dc": "1", "\uacf5\uc2dc\uac00\uaca9(\uc6d0)": "700000000", "\uae30\uc900\ub144\ub3c4": "2012", "\uae30\uc900\uc6d4": "01", "\ub370\uc774\ud130\uae30\uc900\uc77c\uc790": "2016-11-09", "\ubc95\uc815\ub3d9\uba85": "\uc11c\uc6b8\ud2b9\ubcc4\uc2dc \uc885\ub85c\uad6c \uccad\uc6b4\ub3d9", "\ubc95\uc815\ub3d9\ucf54\ub4dc": "1111010100", "\uc804\uc6a9\uba74\uc801(\u33a1)": "211.13", "\uc9c0\ubc88": "4-7", "\ud2b9\uc218\uc9c0\uad6c\ubd84\uba85": "\uc77c\ubc18", "\ud2b9\uc218\uc9c0\uad6c\ubd84\ucf54\ub4dc": "1"}, {"floorNm": "1", "hoNm": "102", "lat": 37.587111, "lng": 126.969069, "\uace0\uc720\ubc88\ud638": "1111010100100040007", "\uacf5\ub3d9\uc8fc\ud0dd\uad6c\ubd84\uba85": "\ub2e4\uc138\ub300", "\uacf5\ub3d9\uc8fc\ud0dd\uad6c\ubd84\ucf54\ub4dc": "5", "\uacf5\ub3d9\uc8fc\ud0dd\uba85": "\uc2e0\uad6c\ud30c\uc778\ud790", "\uacf5\ub3d9\uc8fc\ud0dd\ucf54\ub4dc": "1", "\uacf5\uc2dc\uac00\uaca9(\uc6d0)": "691000000", "\uae30\uc900\ub144\ub3c4": "2012", "\uae30\uc900\uc6d4": "01", "\ub370\uc774\ud130\uae30\uc900\uc77c\uc790": "2016-11-09", "\ubc95\uc815\ub3d9\uba85": "\uc11c\uc6b8\ud2b9\ubcc4\uc2dc \uc885\ub85c\uad6c \uccad\uc6b4\ub3d9", "\ubc95\uc815\ub3d9\ucf54\ub4dc": "1111010100", "\uc804\uc6a9\uba74\uc801(\u33a1)": "209.21", "\uc9c0\ubc88": "4-7", "\ud2b9\uc218\uc9c0\uad6c\ubd84\uba85": "\uc77c\ubc18", "\ud2b9\uc218\uc9c0\uad6c\ubd84\ucf54\ub4dc": "1"}, {"floorNm": "2", "hoNm": "201", "lat": 37.587111, "lng": 126.969069, "\uace0\uc720\ubc88\ud638": "1111010100100040007", "\uacf5\ub3d9\uc8fc\ud0dd\uad6c\ubd84\uba85": "\ub2e4\uc138\ub300", "\uacf5\ub3d9\uc8fc\ud0dd\uad6c\ubd84\ucf54\ub4dc": "5", "\uacf5\ub3d9\uc8fc\ud0dd\uba85": "\uc2e0\uad6c\ud30c\uc778\ud790", "\uacf5\ub3d9\uc8fc\ud0dd\ucf54\ub4dc": "1", "\uacf5\uc2dc\uac00\uaca9(\uc6d0)": "691000000", "\uae30\uc900\ub144\ub3c4": "2012", "\uae30\uc900\uc6d4": "01", "\ub370\uc774\ud130\uae30\uc900\uc77c\uc790": "2016-11-09", "\ubc95\uc815\ub3d9\uba85": "\uc11c\uc6b8\ud2b9\ubcc4\uc2dc \uc885\ub85c\uad6c \uccad\uc6b4\ub3d9", "\ubc95\uc815\ub3d9\ucf54\ub4dc": "1111010100", "\uc804\uc6a9\uba74\uc801(\u33a1)": "207.89", "\uc9c0\ubc88": "4-7", "\ud2b9\uc218\uc9c0\uad6c\ubd84\uba85": "\uc77c\ubc18", "\ud2b9\uc218\uc9c0\uad6c\ubd84\ucf54\ub4dc": "1"}, {"floorNm": "2", "hoNm": "202", "lat": 37.587111, "lng": 126.969069, "\uace0\uc720\ubc88\ud638": "1111010100100040007", "\uacf5\ub3d9\uc8fc\ud0dd\uad6c\ubd84\uba85": "\ub2e4\uc138\ub300", "\uacf5\ub3d9\uc8fc\ud0dd\uad6c\ubd84\ucf54\ub4dc": "5", "\uacf5\ub3d9\uc8fc\ud0dd\uba85": "\uc2e0\uad6c\ud30c\uc778\ud790", "\uacf5\ub3d9\uc8fc\ud0dd\ucf54\ub4dc": "1", "\uacf5\uc2dc\uac00\uaca9(\uc6d0)": "700000000", "\uae30\uc900\ub144\ub3c4": "2012", "\uae30\uc900\uc6d4": "01", "\ub370\uc774\ud130\uae30\uc900\uc77c\uc790": "2016-11-09", "\ubc95\uc815\ub3d9\uba85": "\uc11c\uc6b8\ud2b9\ubcc4\uc2dc \uc885\ub85c\uad6c \uccad\uc6b4\ub3d9", "\ubc95\uc815\ub3d9\ucf54\ub4dc": "1111010100", "\uc804\uc6a9\uba74\uc801(\u33a1)": "215.09", "\uc9c0\ubc88": "4-7", "\ud2b9\uc218\uc9c0\uad6c\ubd84\uba85": "\uc77c\ubc18", "\ud2b9\uc218\uc9c0\uad6c\ubd84\ucf54\ub4dc": "1"}, {"floorNm": "3", "hoNm": "301", "lat": 37.587111, "lng": 126.969069, "\uace0\uc720\ubc88\ud638": "1111010100100040007", "\uacf5\ub3d9\uc8fc\ud0dd\uad6c\ubd84\uba85": "\ub2e4\uc138\ub300", "\uacf5\ub3d9\uc8fc\ud0dd\uad6c\ubd84\ucf54\ub4dc": "5", "\uacf5\ub3d9\uc8fc\ud0dd\uba85": "\uc2e0\uad6c\ud30c\uc778\ud790", "\uacf5\ub3d9\uc8fc\ud0dd\ucf54\ub4dc": "1", "\uacf5\uc2dc\uac00\uaca9(\uc6d0)": "729000000", "\uae30\uc900\ub144\ub3c4": "2012", "\uae30\uc900\uc6d4": "01", "\ub370\uc774\ud130\uae30\uc900\uc77c\uc790": "2016-11-09", "\ubc95\uc815\ub3d9\uba85": "\uc11c\uc6b8\ud2b9\ubcc4\uc2dc \uc885\ub85c\uad6c \uccad\uc6b4\ub3d9", "\ubc95\uc815\ub3d9\ucf54\ub4dc": "1111010100", "\uc804\uc6a9\uba74\uc801(\u33a1)": "219.33", "\uc9c0\ubc88": "4-7", "\ud2b9\uc218\uc9c0\uad6c\ubd84\uba85": "\uc77c\ubc18", "\ud2b9\uc218\uc9c0\uad6c\ubd84\ucf54\ub4dc": "1"}, {"floorNm": "3", "hoNm": "302", "lat": 37.587111, "lng": 126.969069, "\uace0\uc720\ubc88\ud638": "1111010100100040007", "\uacf5\ub3d9\uc8fc\ud0dd\uad6c\ubd84\uba85": "\ub2e4\uc138\ub300", "\uacf5\ub3d9\uc8fc\ud0dd\uad6c\ubd84\ucf54\ub4dc": "5", "\uacf5\ub3d9\uc8fc\ud0dd\uba85": "\uc2e0\uad6c\ud30c\uc778\ud790", "\uacf5\ub3d9\uc8fc\ud0dd\ucf54\ub4dc": "1", "\uacf5\uc2dc\uac00\uaca9(\uc6d0)": "700000000", "\uae30\uc900\ub144\ub3c4": "2012", "\uae30\uc900\uc6d4": "01", "\ub370\uc774\ud130\uae30\uc900\uc77c\uc790": "2016-11-09", "\ubc95\uc815\ub3d9\uba85": "\uc11c\uc6b8\ud2b9\ubcc4\uc2dc \uc885\ub85c\uad6c \uccad\uc6b4\ub3d9", "\ubc95\uc815\ub3d9\ucf54\ub4dc": "1111010100", "\uc804\uc6a9\uba74\uc801(\u33a1)": "212.57", "\uc9c0\ubc88": "4-7", "\ud2b9\uc218\uc9c0\uad6c\ubd84\uba85": "\uc77c\ubc18", "\ud2b9\uc218\uc9c0\uad6c\ubd84\ucf54\ub4dc": "1"}, {"floorNm": "-1", "hoNm": "B02", "lat": 37.587111, "lng": 126.969069, "\uace0\uc720\ubc88\ud638": "1111010100100040007", "\uacf5\ub3d9\uc8fc\ud0dd\uad6c\ubd84\uba85": "\ub2e4\uc138\ub300", "\uacf5\ub3d9\uc8fc\ud0dd\uad6c\ubd84\ucf54\ub4dc": "5", "\uacf5\ub3d9\uc8fc\ud0dd\uba85": "\uc2e0\uad6c\ud30c\uc778\ud790", "\uacf5\ub3d9\uc8fc\ud0dd\ucf54\ub4dc": "1", "\uacf5\uc2dc\uac00\uaca9(\uc6d0)": "264000000", "\uae30\uc900\ub144\ub3c4": "2012", "\uae30\uc900\uc6d4": "01", "\ub370\uc774\ud130\uae30\uc900\uc77c\uc790": "2016-11-09", "\ubc95\uc815\ub3d9\uba85": "\uc11c\uc6b8\ud2b9\ubcc4\uc2dc \uc885\ub85c\uad6c \uccad\uc6b4\ub3d9", "\ubc95\uc815\ub3d9\ucf54\ub4dc": "1111010100", "\uc804\uc6a9\uba74\uc801(\u33a1)": "90.72", "\uc9c0\ubc88": "4-7", "\ud2b9\uc218\uc9c0\uad6c\ubd84\uba85": "\uc77c\ubc18", "\ud2b9\uc218\uc9c0\uad6c\ubd84\ucf54\ub4dc": "1"}, {"floorNm": "-1", "hoNm": "B01", "lat": 37.587111, "lng": 126.969069, "\uace0\uc720\ubc88\ud638": "1111010100100040007", "\uacf5\ub3d9\uc8fc\ud0dd\uad6c\ubd84\uba85": "\ub2e4\uc138\ub300", "\uacf5\ub3d9\uc8fc\ud0dd\uad6c\ubd84\ucf54\ub4dc": "5", "\uacf5\ub3d9\uc8fc\ud0dd\uba85": "\uc2e0\uad6c\ud30c\uc778\ud790", "\uacf5\ub3d9\uc8fc\ud0dd\ucf54\ub4dc": "1", "\uacf5\uc2dc\uac00\uaca9(\uc6d0)": "360000000", "\uae30\uc900\ub144\ub3c4": "2012", "\uae30\uc900\uc6d4": "01", "\ub370\uc774\ud130\uae30\uc900\uc77c\uc790": "2016-11-09", "\ubc95\uc815\ub3d9\uba85": "\uc11c\uc6b8\ud2b9\ubcc4\uc2dc \uc885\ub85c\uad6c \uccad\uc6b4\ub3d9", "\ubc95\uc815\ub3d9\ucf54\ub4dc": "1111010100", "\uc804\uc6a9\uba74\uc801(\u33a1)": "118.77", "\uc9c0\ubc88": "4-7", "\ud2b9\uc218\uc9c0\uad6c\ubd84\uba85": "\uc77c\ubc18", "\ud2b9\uc218\uc9c0\uad6c\ubd84\ucf54\ub4dc": "1"}], "elevationRange": [0, 30], "elevationScale": 50, "extruded": true, "getPosition": "@@=[lng, lat]", "id": "05d39178-35a2-4734-b805-c49e0745d85a", "pickable": true}], "mapProvider": "mapbox", "mapStyle": "mapbox://styles/mapbox/dark-v9", "views": [{"@@type": "MapView", "controller": true}]};
+    const MAPBOX_API_KEY = 'pk.eyJ1IjoicmVlanVuZyIsImEiOiJja2lrdWhsZXIwMHg4MzBtYTRmNzBrdWFnIn0.EAYt2tmwMGSQktEO7KkewA';
+    const GOOGLE_MAPS_API_KEY = 'None';
+    const tooltip = true;
+    const customLibraries = null;
+
+    const deck = createDeck({
+      mapboxApiKey: MAPBOX_API_KEY,
+      googleMapsKey: GOOGLE_MAPS_API_KEY,
+      container: document.getElementById('deck-container'),
+      jsonInput,
+      tooltip,
+      customLibraries
+    });
+
+  </script>
+</html>
