@@ -2,14 +2,15 @@
 
 
 
-
+<!---
 ```
 conda install -c conda-forge xmltodict
 ```
-
+--->
 [공공데이터](https://www.data.go.kr/index.do)
 
 ### Reference
+<!--- 
 - [국토부 한국부동산원_전국 청약 분양정보 상세조회 서비스](https://www.data.go.kr/data/15098547/openapi.do)
 ```
 # Python3 샘플 코드 #
@@ -26,10 +27,19 @@ print(response.content)
 - [국토부 한국수자원공사_토지 분양 정보](https://www.data.go.kr/data/15099019/openapi.do)
 - [국토교통부_대지권등록정보조회서비스](https://www.data.go.kr/data/15056691/openapi.do)
 - [국토교통부_토지특성정보서비스](https://www.data.go.kr/data/15057558/openapi.do)
-
+--->
 - [국토교통부 공동주택가격정보서비스](https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15057988)
 
+   [View jupyter notebook](https://github.com/reejungkim/OpenAPI_Ministry_of_land/blob/main/%EA%B5%AD%ED%86%A0%EA%B5%90%ED%86%B5%EB%B6%80_%EA%B3%B5%EB%8F%99%EC%A3%BC%ED%83%9D%EA%B0%80%EA%B2%A9%EC%A0%95%EB%B3%B4%EC%84%9C%EB%B9%84%EC%8A%A4.ipynb)
+```
+import requests
 
+url = 'http://apis.data.go.kr/1611000/nsdi/ApartHousingPriceService/wms/getApartHousingPriceWMS'
+params ={'serviceKey' : '서비스키', 'layers' : '163', 'crs' : 'EPSG:5174', 'bbox' : '191000.225,447240.534,191179.03,447423.308', 'width' : '915', 'height' : '700', 'format' : 'image/png', 'transparent' : 'false', 'bgcolor' : '0xFFFFFF', 'exceptions' : 'blank' }
+
+response = requests.get(url, params=params)
+print(response.content)
+```
 
 
 | 항목명(국문)  | 항목명(영문)        | 항목크기 | 항목구분 | 샘플데이터               | 항목설명     |
