@@ -10,3 +10,14 @@ def get_file_contents(filename):
             return f.read().strip()
     except FileNotFoundError:
         print("'%s' file not found" % filename)
+
+
+def createTimeStampedFolder(path):
+    import os
+    import subprocess
+    from datetime import datetime
+
+    timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    mydir = os.path.join(path, timestamp)
+    os.makedirs(mydir, exist_ok=True)
+    subprocess.run(['open', mydir], check=True)
