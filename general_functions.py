@@ -53,3 +53,13 @@ def createTimeStampedFolder(path):
     mydir = os.path.join(path, timestamp)
     os.makedirs(mydir, exist_ok=True)
     subprocess.run(['open', mydir], check=True)
+
+
+def createShapPlot(model, X_dataset):
+    import shap
+    explainer = shap.TreeExplainer(model)
+    shap_values = explainer.shap_values(X_dataset)
+
+    return shap.summary_plot(shap_values,
+                             features=X_dataset,
+                             feature_names=X_dataset.columns)

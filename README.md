@@ -62,3 +62,8 @@ print(response.content)
 | 전용면적(㎡)     | prvuseAr       | 20       | 옵션     | 84.45                        | 전용면적(㎡)     |
 | 공시가격(원)     | pblntfPc       | 13       | 옵션     | 480000000                    | 공시가격(원)     |
 | 데이터기준일자   | lastUpdtDt     | 10       | 옵션     | 2016-09-26                   | 데이터기준일자   |
+
+### Data source
+
+[국가통계포털](https://kosis.kr/index/index.do)
+[고용노동부](http://laborstat.moel.go.kr/hmp/tblInfo/TblInfoList.do?menuId=0010001100101102&leftMenuId=0010001100101&bbsId=)
