@@ -63,3 +63,36 @@ def createShapPlot(model, X_dataset):
     return shap.summary_plot(shap_values,
                              features=X_dataset,
                              feature_names=X_dataset.columns)
+
+
+def load_xml_to_dataframe(response_xml, keyword):
+    import urllib.request
+
+    import bs4 as bs
+    import pandas as pd
+
+    soup = bs.BeautifulSoup(response_xml, 'xml')
+
+    rows = soup.find_all(keyword)
+    columns = rows[0].find_all()
+
+    rowList = []
+    nameList = []
+    columnList = []
+
+    rowsLen = len(rows)
+    columnsLen = len(columns)
+
+    for i in range(0, rowsLen):
+        columns = rows[i].find_all()
+
+        for j in range(0, columnsLen):
+            if i == 0:
+                nameList.append(columns[j].name)  # header
+            eachColumn = columns[j].text  # value
+            columnList.append(eachColumn)
+        rowList.append(columnList)
+        columnList = []    # 다음 row의 값을 넣기 위해 비워준다
+
+    result = pd.DataFrame(rowList, columns=nameList)
+    return result
