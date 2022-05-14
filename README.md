@@ -30,6 +30,8 @@ print(response.content)
 - [국토교통부_아파트 분양권전매 신고 자료](https://www.data.go.kr/data/15056782/openapi.do)
 --->
 
+-[행정표준코드 관리시스템](https://www.code.go.kr/index.do)
+
 - [국토교통부 공동주택가격정보서비스](https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15057988)
 
   [View jupyter notebook](https://github.com/reejungkim/OpenAPI_Ministry_of_land/blob/main/%EA%B5%AD%ED%86%A0%EA%B5%90%ED%86%B5%EB%B6%80_%EA%B3%B5%EB%8F%99%EC%A3%BC%ED%83%9D%EA%B0%80%EA%B2%A9%EC%A0%95%EB%B3%B4%EC%84%9C%EB%B9%84%EC%8A%A4.ipynb)
