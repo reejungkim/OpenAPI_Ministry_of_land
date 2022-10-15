@@ -1,0 +1,593 @@
+
+
+
+
+
+
+
+
+
+
+<!--목록 -->
+<div class="tbTitle">
+ 	<h4>
+		
+			
+			
+			
+			
+	        
+	        
+			전체
+		
+		&nbsp;<span class="txtCB" id="txtCB">610</span>건
+		
+			
+				
+					
+					(2022년 10월 04일)
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+		
+	</h4>
+	
+	<div class="sort" >
+		
+	    	
+			
+			
+		
+		
+			
+				<a id="time" name="sort" onclick="setOrder(this);" class="downOn" href="#none" data-order="desc" title="시간 내림차순">시간</a>
+				<a id="crp" name="sort"  onclick="setOrder(this);" class="upOff" href="#none" data-order="asc" title="회사명 올림차순">회사명</a>
+				<a id="rpt" name="sort"  onclick="setOrder(this);" class="upOff" href="#none" data-order="asc" title="보고서명 올림차순">보고서명</a>
+			
+			
+			
+			
+		
+	</div>
+</div>
+<div class="tbListInner" >
+	<table class="tbList" summary="시간,공시대상회사,보고서명,제출인,접수일자,비고 순으로 되어있습니다.">
+		<caption>유가증권시장 목록</caption>
+		<colgroup>
+			<col style="width:7%">
+			<col style="width:24%">
+			<col style="width:auto">
+			<col style="width:13%">
+			<col style="width:11%">
+			<col style="width:8%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="row"><label for="inpSample00">시간</label></th>
+				<th scope="row"><label for="inpSample00">공시대상회사</label></th>
+				<th scope="row"><label for="inpSample00">보고서명</label></th>
+				<th scope="row"><label for="inpSample00">제출인</label></th>
+				<th scope="row"><label for="inpSample00">접수일자</label></th>
+				<th scope="row"><label for="inpSample00">비고</label></th>
+			</tr>
+		</thead>
+		
+			
+				<tbody>
+				
+					
+						
+						
+						
+						
+							
+						
+					
+					
+					
+					
+					
+					
+						<tr>
+							<td>
+								
+								
+								
+								07:30
+							</td>
+							<td class="tL">
+							    <span class="innerWrap">
+							    	<span class="tagCom_etc"  title="기타법인" style="cursor:default">기</span>
+									<a href="javascript:openCorpInfoNew('00243553', 'winCorpInfo', '/dsae001/selectPopup.ax');" title="신한자산운용 기업개황 새창" >
+										신한자산운용
+									</a>
+								</span>
+								
+							</td>
+							<td class="tL">
+								<a href="/dsaf001/main.do?rcpNo=20220930100004"  onclick="openReportViewer('20220930100004'); return false;" id="r_20220930100004"
+									title="효력발생안내( 2022.9.28. 제출 증권신고서(집합투자증권-신탁형) ) 공시뷰어 새창" >효력발생안내
+									
+		  							( 2022.9.28. 제출 증권신고서(집합투자증권-신탁형) )
+								</a>
+							</td>
+							<td class="tL ellipsis" title="금융감독원">금융감독원</td>
+							<td>2022.10.04</td>
+							<td></td>
+						</tr>
+					
+					
+					
+					
+					
+					
+					
+					
+				
+					
+						
+						
+						
+						
+							
+						
+					
+					
+					
+					
+					
+					
+						<tr>
+							<td>
+								
+								
+								
+								07:30
+							</td>
+							<td class="tL">
+							    <span class="innerWrap">
+							    	<span class="tagCom_etc"  title="기타법인" style="cursor:default">기</span>
+									<a href="javascript:openCorpInfoNew('00243553', 'winCorpInfo', '/dsae001/selectPopup.ax');" title="신한자산운용 기업개황 새창" >
+										신한자산운용
+									</a>
+								</span>
+								
+							</td>
+							<td class="tL">
+								<a href="/dsaf001/main.do?rcpNo=20220930100003"  onclick="openReportViewer('20220930100003'); return false;" id="r_20220930100003"
+									title="효력발생안내( 2022.9.28. 제출 증권신고서(집합투자증권-신탁형) ) 공시뷰어 새창" >효력발생안내
+									
+		  							( 2022.9.28. 제출 증권신고서(집합투자증권-신탁형) )
+								</a>
+							</td>
+							<td class="tL ellipsis" title="금융감독원">금융감독원</td>
+							<td>2022.10.04</td>
+							<td></td>
+						</tr>
+					
+					
+					
+					
+					
+					
+					
+					
+				
+					
+						
+						
+						
+						
+							
+						
+					
+					
+					
+					
+					
+					
+						<tr>
+							<td>
+								
+								
+								
+								07:30
+							</td>
+							<td class="tL">
+							    <span class="innerWrap">
+							    	<span class="tagCom_etc"  title="기타법인" style="cursor:default">기</span>
+									<a href="javascript:openCorpInfoNew('00243553', 'winCorpInfo', '/dsae001/selectPopup.ax');" title="신한자산운용 기업개황 새창" >
+										신한자산운용
+									</a>
+								</span>
+								
+							</td>
+							<td class="tL">
+								<a href="/dsaf001/main.do?rcpNo=20220930100002"  onclick="openReportViewer('20220930100002'); return false;" id="r_20220930100002"
+									title="효력발생안내( 2022.9.27. 제출 증권신고서(집합투자증권-신탁형) ) 공시뷰어 새창" >효력발생안내
+									
+		  							( 2022.9.27. 제출 증권신고서(집합투자증권-신탁형) )
+								</a>
+							</td>
+							<td class="tL ellipsis" title="금융감독원">금융감독원</td>
+							<td>2022.10.04</td>
+							<td></td>
+						</tr>
+					
+					
+					
+					
+					
+					
+					
+					
+				
+					
+						
+						
+						
+						
+							
+						
+					
+					
+					
+					
+					
+					
+						<tr>
+							<td>
+								
+								
+								
+								07:30
+							</td>
+							<td class="tL">
+							    <span class="innerWrap">
+							    	<span class="tagCom_etc"  title="기타법인" style="cursor:default">기</span>
+									<a href="javascript:openCorpInfoNew('00243553', 'winCorpInfo', '/dsae001/selectPopup.ax');" title="신한자산운용 기업개황 새창" >
+										신한자산운용
+									</a>
+								</span>
+								
+							</td>
+							<td class="tL">
+								<a href="/dsaf001/main.do?rcpNo=20220930100001"  onclick="openReportViewer('20220930100001'); return false;" id="r_20220930100001"
+									title="효력발생안내( 2022.9.27. 제출 증권신고서(집합투자증권-신탁형) ) 공시뷰어 새창" >효력발생안내
+									
+		  							( 2022.9.27. 제출 증권신고서(집합투자증권-신탁형) )
+								</a>
+							</td>
+							<td class="tL ellipsis" title="금융감독원">금융감독원</td>
+							<td>2022.10.04</td>
+							<td></td>
+						</tr>
+					
+					
+					
+					
+					
+					
+					
+					
+				
+					
+						
+						
+						
+						
+							
+						
+					
+					
+					
+					
+					
+					
+						<tr>
+							<td>
+								
+								
+								
+								07:30
+							</td>
+							<td class="tL">
+							    <span class="innerWrap">
+							    	<span class="tagCom_etc"  title="기타법인" style="cursor:default">기</span>
+									<a href="javascript:openCorpInfoNew('00331478', 'winCorpInfo', '/dsae001/selectPopup.ax');" title="우리자산운용 기업개황 새창" >
+										우리자산운용
+									</a>
+								</span>
+								
+							</td>
+							<td class="tL">
+								<a href="/dsaf001/main.do?rcpNo=20220930100009"  onclick="openReportViewer('20220930100009'); return false;" id="r_20220930100009"
+									title="효력발생안내( 2022.9.28. 제출 증권신고서(집합투자증권-신탁형) ) 공시뷰어 새창" >효력발생안내
+									
+		  							( 2022.9.28. 제출 증권신고서(집합투자증권-신탁형) )
+								</a>
+							</td>
+							<td class="tL ellipsis" title="금융감독원">금융감독원</td>
+							<td>2022.10.04</td>
+							<td></td>
+						</tr>
+					
+					
+					
+					
+					
+					
+					
+					
+				
+					
+						
+							
+						
+						
+						
+						
+					
+					
+					
+					
+					
+					
+						<tr>
+							<td>
+								
+								
+								
+								07:30
+							</td>
+							<td class="tL">
+							    <span class="innerWrap">
+							    	<span class="tagCom_kospi" title="유가증권시장" style="cursor:default">유</span>
+									<a href="javascript:openCorpInfoNew('00164672', 'winCorpInfo', '/dsae001/selectPopup.ax');" title="한일현대시멘트 기업개황 새창" >
+										한일현대시멘트
+									</a>
+								</span>
+								
+							</td>
+							<td class="tL">
+								<a href="/dsaf001/main.do?rcpNo=20220921100009"  onclick="openReportViewer('20220921100009'); return false;" id="r_20220921100009"
+									title="효력발생안내( 2022.9.21. 제출 증권신고서(지분증권) ) 공시뷰어 새창" >효력발생안내
+									
+		  							( 2022.9.21. 제출 증권신고서(지분증권) )
+								</a>
+							</td>
+							<td class="tL ellipsis" title="금융감독원">금융감독원</td>
+							<td>2022.10.04</td>
+							<td></td>
+						</tr>
+					
+					
+					
+					
+					
+					
+					
+					
+				
+					
+						
+						
+						
+						
+							
+						
+					
+					
+					
+					
+					
+					
+						<tr>
+							<td>
+								
+								
+								
+								07:30
+							</td>
+							<td class="tL">
+							    <span class="innerWrap">
+							    	<span class="tagCom_etc"  title="기타법인" style="cursor:default">기</span>
+									<a href="javascript:openCorpInfoNew('01571860', 'winCorpInfo', '/dsae001/selectPopup.ax');" title="로드제약기술 기업개황 새창" >
+										로드제약기술
+									</a>
+								</span>
+								
+							</td>
+							<td class="tL">
+								<a href="/dsaf001/main.do?rcpNo=20220930000725"  onclick="openReportViewer('20220930000725'); return false;" id="r_20220930000725"
+									title="소액공모감사보고 공시뷰어 새창" >소액공모감사보고
+									
+		  							
+								</a>
+							</td>
+							<td class="tL ellipsis" title="로드제약기술">로드제약기술</td>
+							<td>2022.10.04</td>
+							<td></td>
+						</tr>
+					
+					
+					
+					
+					
+					
+					
+					
+				
+					
+						
+						
+						
+						
+							
+						
+					
+					
+					
+					
+					
+					
+						<tr>
+							<td>
+								
+								
+								
+								07:30
+							</td>
+							<td class="tL">
+							    <span class="innerWrap">
+							    	<span class="tagCom_etc"  title="기타법인" style="cursor:default">기</span>
+									<a href="javascript:openCorpInfoNew('01571860', 'winCorpInfo', '/dsae001/selectPopup.ax');" title="로드제약기술 기업개황 새창" >
+										로드제약기술
+									</a>
+								</span>
+								
+							</td>
+							<td class="tL">
+								<a href="/dsaf001/main.do?rcpNo=20220930000726"  onclick="openReportViewer('20220930000726'); return false;" id="r_20220930000726"
+									title="소액공모공시서류(지분증권) 공시뷰어 새창" >소액공모공시서류(지분증권)
+									
+		  							
+								</a>
+							</td>
+							<td class="tL ellipsis" title="로드제약기술">로드제약기술</td>
+							<td>2022.10.04</td>
+							<td></td>
+						</tr>
+					
+					
+					
+					
+					
+					
+					
+					
+				
+					
+						
+							
+						
+						
+						
+						
+					
+					
+					
+					
+					
+					
+						<tr>
+							<td>
+								
+								
+								
+								07:30
+							</td>
+							<td class="tL">
+							    <span class="innerWrap">
+							    	<span class="tagCom_kospi" title="유가증권시장" style="cursor:default">유</span>
+									<a href="javascript:openCorpInfoNew('00136721', 'winCorpInfo', '/dsae001/selectPopup.ax');" title="신영증권 기업개황 새창" >
+										신영증권
+									</a>
+								</span>
+								
+							</td>
+							<td class="tL">
+								<a href="/dsaf001/main.do?rcpNo=20220930000729"  onclick="openReportViewer('20220930000729'); return false;" id="r_20220930000729"
+									title="투자설명서(일괄신고) 공시뷰어 새창" >투자설명서(일괄신고)
+									
+		  							
+								</a>
+							</td>
+							<td class="tL ellipsis" title="신영증권">신영증권</td>
+							<td>2022.10.04</td>
+							<td></td>
+						</tr>
+					
+					
+					
+					
+					
+					
+					
+					
+				
+					
+						
+						
+							
+						
+						
+						
+					
+					
+					
+					
+					
+					
+						<tr>
+							<td>
+								
+								
+								
+								07:30
+							</td>
+							<td class="tL">
+							    <span class="innerWrap">
+							    	<span class="tagCom_kosdaq" title="코스닥시장" style="cursor:default">코</span>
+									<a href="javascript:openCorpInfoNew('00351454', 'winCorpInfo', '/dsae001/selectPopup.ax');" title="한창바이오텍 기업개황 새창" >
+										한창바이오텍
+									</a>
+								</span>
+								
+							</td>
+							<td class="tL">
+								<a href="/dsaf001/main.do?rcpNo=20220930000728"  onclick="openReportViewer('20220930000728'); return false;" id="r_20220930000728"
+									title="사외이사의선임ㆍ해임또는중도퇴임에관한신고 공시뷰어 새창" >사외이사의선임ㆍ해임또는중도퇴임에관한신고
+									
+		  							
+								</a>
+							</td>
+							<td class="tL ellipsis" title="한창바이오텍">한창바이오텍</td>
+							<td>2022.10.04</td>
+							<td></td>
+						</tr>
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				</tbody>
+			
+			
+		
+		<input type="hidden" name="totalCnt" id="totalCnt" value="610">
+	</table>
+</div>
+
+	<div class = "psWrap">
+		<div class="pageInfo">[7/7] [총 610건]</div>
+		
+		<div class="pageSkip">
+			<ul>
+				<li><a href="javascript:search(1);">1</a></li><li><a href="javascript:search(2);">2</a></li><li><a href="javascript:search(3);">3</a></li><li><a href="javascript:search(4);">4</a></li><li><a href="javascript:search(5);">5</a></li><li><a href="javascript:search(6);">6</a></li><li class="on"><a onClick="javascript:void(0);">7</a></li>
+
+			</ul>
+		</div>
+	</div>
+
